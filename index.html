@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Máquina de Turing - Paridad de Cadenas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Máquina de Turing - Paridad de cadenas a's y b's</h1>
+        <div class="input-section">
+            <label for="input-string">Ingrese sus palabras (ingrese sus cadenas de a's y b's separadas por |):</label>
+            <input type="text" id="input-string" placeholder="Ejemplo: abb|aab">
+            <button onclick="processInput()">Procesar</button>
+        </div>
+        <div class="output-section">
+            <h2>ID de la Máquina:</h2>
+            <div id="turing-id" class="id-output"></div>
+
+            <div id="diagram-wrapper">
+                <h3>Diagrama de la Máquina</h3>
+                <div id="diagram-container"></div>
+            </div>
+
+            <div class="tape-controls">
+                <button id="prev-step">◀ Anterior</button>
+                <button id="play-pause">▶ Play</button>
+                <button id="next-step">Siguiente ▶</button>
+                <button id="reset">Reset</button>
+                <span id="step-info"></span>
+            </div>
+
+            <div id="tape-container" class="tape"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

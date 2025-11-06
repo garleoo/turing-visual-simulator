@@ -20,7 +20,7 @@ Esta aplicación web simula una máquina de Turing que:
 
 ## Uso
 
-1. Visita la [página del simulador](https://garleoo.github.io/turing-machine-simulator)
+1. Visita la [página del simulador](https://garleoo.github.io/turing-visual-simulator)
 2. Ingresa dos cadenas de a's y b's separadas por | (ejemplo: `abb|aab`)
 3. Presiona "Procesar" para iniciar la simulación
 4. Usa los controles para ver la ejecución paso a paso

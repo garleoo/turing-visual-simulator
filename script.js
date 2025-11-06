@@ -417,5 +417,32 @@ function highlightDiagram(prevState, currState) {
 
 // inicializamos diagrama al cargar la página
 window.addEventListener('load', ()=>{
-    try { initDiagram(); } catch(e){ console.error(e); }
+    try { 
+        initDiagram(); 
+        renderTransitionsTable();
+    } catch(e){ console.error(e); }
 });
+
+function renderTransitionsTable() {
+    const tableDiv = document.getElementById('transitions-table');
+    if (!tableDiv) return;
+    const tm = new TuringMachine();
+    const rows = [];
+    Object.entries(tm.transitions).forEach(([state, trans]) => {
+        Object.entries(trans).forEach(([read, [next, write, dir]]) => {
+            rows.push({
+                state,
+                read,
+                write,
+                next,
+                dir
+            });
+        });
+    });
+    let html = '<table><thead><tr><th>Estado</th><th>Lee</th><th>Escribe</th><th>Siguiente</th><th>Acción</th></tr></thead><tbody>';
+    for (const r of rows) {
+        html += `<tr><td>${r.state}</td><td>${r.read}</td><td>${r.write}</td><td>${r.next}</td><td>${r.dir}</td></tr>`;
+    }
+    html += '</tbody></table>';
+    tableDiv.innerHTML = html;
+}

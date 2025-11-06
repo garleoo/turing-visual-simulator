@@ -1,4 +1,77 @@
 body {
+    display: flex;
+    flex-direction: row;
+}
+
+.sidebar-info {
+    width: 370px;
+    min-width: 320px;
+    max-width: 400px;
+    background: #f7f7f7;
+    border-right: 2px solid #e0e0e0;
+    padding: 24px 18px 24px 18px;
+    font-size: 15px;
+    color: #222;
+    height: 100vh;
+    overflow-y: auto;
+    box-sizing: border-box;
+    position: sticky;
+    left: 0;
+    top: 0;
+    z-index: 100;
+}
+
+.machine-label {
+    display: block;
+    font-family: 'Consolas', 'Menlo', 'Monaco', monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    background: #fffbe7;
+    border-radius: 8px;
+    padding: 16px 10px 16px 16px;
+    border: 1px solid #f0e1b0;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    margin-bottom: 18px;
+    white-space: pre-line;
+}
+
+#transitions-table {
+    margin-top: 10px;
+    overflow-x: auto;
+}
+
+#transitions-table table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 13px;
+    background: #fff;
+}
+
+#transitions-table th, #transitions-table td {
+    border: 1px solid #e0e0e0;
+    padding: 4px 7px;
+    text-align: center;
+}
+
+#transitions-table th {
+    background: #ffeaa7;
+    font-weight: bold;
+}
+
+#transitions-table tr:nth-child(even) td {
+    background: #f9f9f9;
+}
+
+.container {
+    flex: 1 1 auto;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;

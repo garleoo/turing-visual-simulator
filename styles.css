@@ -272,3 +272,14 @@ button:hover {
     fill: #2d9cdb;
     font-weight: 700;
 }
+
+.video-link {
+    margin-top: 8px;
+    margin-bottom: 14px;
+    font-size: 14px;
+}
+.video-link a {
+    color: #1565c0;
+    text-decoration: none;
+}
+.video-link a:hover { text-decoration: underline; }
